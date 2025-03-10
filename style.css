@@ -1,0 +1,187 @@
+/* Header Styles */
+header {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Icon styles */
+.side-panel {
+    position: fixed;
+    top: 70px; /* Below header */
+    right: -500px; /* Start off-screen */
+    width: 450px;
+    height: calc(100vh - 70px);
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.side-panel.active {
+    right: 0;
+}
+
+.panel-content {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.option-group {
+    margin-bottom: 15px;
+}
+
+/* Dropdown Styles */
+#endPoint {
+    width: 100%;
+    box-sizing: border-box; 
+    padding: 5px;
+    margin-bottom: 10px; 
+}
+
+/* Map Container */
+#map {
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+    width: 100%;
+}
+
+/* Button Styles */
+#routingBtn {
+    background-color: white;
+    color: #6a1b9a;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#routingBtn:hover {
+    background-color: #f0f0f0;
+}
+
+#togglePanel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    background-color: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* Styling for the actual arrow */
+.arrow-icon::before {
+    content: "▶"; 
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate arrow when active */
+#togglePanel.active .arrow-icon::before {
+    transform: rotate(90deg);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #666;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .side-panel {
+        width: 100%;
+        right: -100%;
+    }
+    
+    header h1 {
+        font-size: 18px;
+    }
+    
+    .header-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Popup styling */
+.ol-popup {
+    position: absolute;
+    background: linear-gradient(135deg, rgba(230, 177, 216, 0.95), rgba(184, 95, 140, 0.95)); /* Gradient effect */
+    border-radius: 9px;
+    border: 1px solid #434041;
+    bottom: 12px;
+    transform: translate(-50%, 0);
+    margin-bottom: 18px;
+    white-space: normal; /* Allow text to wrap */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    text-align: center;
+    min-width: 200px; /* Increased minimum width */
+    max-width: 300px; /* Set a maximum width */
+    padding: 10px; /* Add padding for better spacing */
+    font-family: "Poppins", sans-serif; /* Modern font */
+    backdrop-filter: blur(8px); /* Glassmorphism effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.popup-content {
+    font-size: 14px; /* Adjust font size for readability */
+    font-weight: bold;
+    color: #fff; /* White text for better contrast */
+}
+
+.small-icon {
+    width: 30px; /* Adjust size to make icons smaller */
+    height:35px; /* Adjust size to make icons smaller */
+    vertical-align: middle; /* Align icon with text */
+}
+
+/* Styles for dropdowns */
+#multipleDestinationDropdowns select {
+    width: 70%; 
+    padding: 5px; 
+    margin-bottom: 10px; 
+    box-sizing: border-box; 
+}
+
