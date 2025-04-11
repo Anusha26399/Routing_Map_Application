@@ -94,7 +94,7 @@ full_path AS (
 SELECT id, geom FROM full_path;
 ```  
 
-📦 Deployment Tips
+## 📦 Deployment Tips
 Set up your database with PostgreSQL, PostGIS, and PgRouting.
 
 Use QGIS to prepare and export your road layers.
