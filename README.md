@@ -95,12 +95,12 @@ SELECT id, geom FROM full_path;
 ```  
 
 ## 📦 Deployment Tips
-Set up your database with PostgreSQL, PostGIS, and PgRouting.
+- Set up your database with PostgreSQL, PostGIS, and PgRouting.
 
-Use QGIS to prepare and export your road layers.
+- Use QGIS to prepare and export your road layers.
 
-Host spatial layers on GeoServer and consume them via WMS in frontend.
+- Host spatial layers on GeoServer and consume them via WMS in frontend.
 
-Integrate all map layers and logic using JavaScript (OpenLayers).
+- Integrate all map layers and logic using JavaScript (OpenLayers).
 
 
