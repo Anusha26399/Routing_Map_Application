@@ -6,7 +6,6 @@ A routing web application that provides:
 - **Multi-Destination Route Planning**
 
 ---
----
 ## 🎥 Application Preview
 
 ![MCA Dashboard ](dashboard.gif)
