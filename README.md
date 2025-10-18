@@ -7,7 +7,7 @@ A routing web application that provides:
 
 ---
 ---
-## 🎥 Dashboard Preview
+## 🎥 Application Preview
 
 ![MCA Dashboard ](dashboard.gif)
 
