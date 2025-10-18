@@ -6,7 +6,12 @@ A routing web application that provides:
 - **Multi-Destination Route Planning**
 
 ---
+---
+## 🎥 Dashboard Preview
 
+![MCA Dashboard ](dashboard.gif)
+
+---
 ## 🚀 Features
 
 - 🔍 Find nearest road vertex to your location
